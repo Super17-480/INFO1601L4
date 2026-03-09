@@ -1,17 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fun Layout</title>
 </head>
 <style>
+* {
+        box-sizing: border-box;
+}
+
+header, footer, section, aside, main{
+        padding: 1em;
+}
+
+header, footer{
+        color: white;
+        background-color:  #6A5ACD;
+        flex-grow: 1;
+}
+
+aside{
+        display: flex;
+        justify-content: center;
+        color: #212121;
+        background-color: #FFDAB9;
+        flex-grow: 3;
+}
+section{
+        background-color: #FFA07A;
+        color: white;
+        flex-grow: 1;
+        margin: 0.5em;
+}
+
+main{
+        background-color: #20B2AA;
+        color: white;
+        flex-grow: 7;
+}
+
+body{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        height: 100vh;
+        width: 100vw;
+        margin:0;
+}
+
+.row{
+        display: flex;
+        flex-direction: row;
+}
+
+div.row{
+        flex-grow: 8;
+}
+
+.col{
+        display: flex;
+        flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  div.row{
+                flex-direction: column;
+        }
+}
 
 </style>
 <body>
 
+<header>🌟 Welcome to My Cool Website</header>
 
+<div class="row">
+                <aside class="col">
+                <section>🎮 Games I Like</section>
+                <section>🎧 Music & Chill</section>
+        </aside>
+        <main>🚀 Main Content Area - Put your important stuff here!</main>
+</div>
 
-	
+<footer>✨ Thanks for Visiting!</footer>
+
+        
 </body>
 </html>
